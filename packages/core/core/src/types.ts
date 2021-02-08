@@ -277,6 +277,17 @@ export interface UseReview<REVIEW, REVIEWS_SEARCH_PARAMS, REVIEW_ADD_PARAMS> {
   loading: ComputedProperty<boolean>;
   [x: string]: any;
 }
+export interface UseBilling<BILLING, BILLING_PARAMS> {
+  error: ComputedProperty<UseBillingErrors>;
+  loading: ComputedProperty<boolean>;
+  billing: ComputedProperty<BILLING>;
+  load: () => Promise<void>;
+  save: (params: { params: BILLING_PARAMS; billingDetails: BILLING }) => Promise<void>;
+}
+export interface UseBillingErrors {
+  load?: Error;
+  save?: Error;
+}
 export interface BillingGetters<BILLING, BILLING_ADDRESS_ITEM> {
   getAddress: (shipping: BILLING) => BILLING_ADDRESS_ITEM;
   getAddressPostCode: (address: BILLING_ADDRESS_ITEM) => string;

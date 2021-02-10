@@ -16,6 +16,7 @@ src/themes/catalog/resource/i18n.json
 src/themes/default/resource/i18n.json
 yarn-error.log
 package-lock.json
+yarn.lock
 cypress/videos
 cypress/screenshots
 core/resource/i18n/de-DE.json
@@ -34,3 +35,5 @@ core/resource/i18n/ru-RU.json
 #unit testing
 /test/unit/coverage
 /static
+yarn.lock
+yarn.lock
